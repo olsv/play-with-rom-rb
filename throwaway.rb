@@ -57,7 +57,7 @@ rom = ROM.container(:sql, 'sqlite:memory') do |config|
       end
     end
 
-    auto_struct true
+    #auto_struct true
   end
 
   config.relation(:profiles) do
@@ -67,7 +67,7 @@ rom = ROM.container(:sql, 'sqlite:memory') do |config|
       end
     end
 
-    auto_struct true
+    #auto_struct true
   end
 
   config.relation(:blogs) do
@@ -78,7 +78,7 @@ rom = ROM.container(:sql, 'sqlite:memory') do |config|
       end
     end
 
-    auto_struct true
+    #auto_struct true
   end
 
   config.relation(:posts) do
@@ -90,7 +90,7 @@ rom = ROM.container(:sql, 'sqlite:memory') do |config|
       end
     end
 
-    auto_struct true
+    #auto_struct true
   end
 
   config.relation(:comments) do
@@ -101,7 +101,7 @@ rom = ROM.container(:sql, 'sqlite:memory') do |config|
       end
     end
 
-    auto_struct true
+    #auto_struct true
   end
 end
 
@@ -251,7 +251,8 @@ user_with_profile = user_repo.create_with_profile(
 # TODO dies with
 # rom-mapper-1.2.1/lib/rom/struct.rb:112:in `rescue in method_missing': undefined method `[]=' for #<ROM::Struct::User:0x007fe3ef994a28> (ROM::Struct::MissingAttribute)
 # Did you mean?  [] (attribute not loaded?)
-# tmp however works as expected. What's causing the issue above
+# tmp however works as expected. What's causing the issue above? - auto_struct true causes the error above
+# what auto_struct does? Need links
 
 binding.pry
 
