@@ -74,6 +74,7 @@ GEM
       rom-core (~> 4.1)
       sequel (>= 4.49)
     sequel (5.8.0)
+    sqlite3 (1.3.13)
     transproc (1.0.2)
 
 PLATFORMS
@@ -83,6 +84,7 @@ DEPENDENCIES
   pry-byebug
   rom
   rom-sql
+  sqlite3
 
 BUNDLED WITH
    1.15.4
